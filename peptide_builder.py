@@ -816,7 +816,7 @@ def calc_distance(ref, atom):
     distance = np.sqrt(distance)
     return distance
 
-    def save_xyz_files(new_molecules: list, frags: list, molecule_dict):
+def save_xyz_files(new_molecules: list, frags: list, molecule_dict):
     '''
         accepts the new_molecules array and creates an XYZ file for each fragment placement
 
@@ -925,7 +925,7 @@ def get_best_poses(ies: list, frags: list):
 
     return best_pose_for_fragments
 
-    def distance_too_short(frag_coords1, frag_coords2, threshold=1.4):
+def distance_too_short(frag_coords1, frag_coords2, threshold=1.4):
     for atom1 in frag_coords1:
         for atom2 in frag_coords2:
             if np.linalg.norm(np.array(atom1) - np.array(atom2)) < threshold:
@@ -983,7 +983,7 @@ def get_best_seperate_poses(ies: list, frags: list, bs_object, new_molecules):
 
     return best_pose_for_fragments
 
-    def combine_best_poses(frags: list, bs: dict, new_molecules: list, best_pose_for_fragments: list):
+def combine_best_poses(frags: list, bs: dict, new_molecules: list, best_pose_for_fragments: list):
   '''
     Accepts the new_molecules array and combines the best poses for each fragment
 
@@ -1224,3 +1224,4 @@ def test_centers(all_centers:list, all_names:list):
 
 
   return sorted_distances, sorted_names
+
