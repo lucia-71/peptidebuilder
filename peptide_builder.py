@@ -570,7 +570,7 @@ def show_fragment(frag_to_show: dict):
 
     return formula,test_list
 
-    def add_box(val, vdw_distance):
+def add_box(val, vdw_distance):
     '''
         Adds an extra vdW distance to a dimension
 
@@ -1221,5 +1221,6 @@ def test_centers(all_centers:list, all_names:list):
     sequence += f"{name_to_ol[sorted_names[i+1]]}"
   print(sequence)
   return distances
+
 
   return sorted_distances, sorted_names
